@@ -20,6 +20,9 @@
 		F071C1332309CEDD00423E2D /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F071C1322309CEDD00423E2D /* NetworkDataFetcher.swift */; };
 		F071C1352309CF3E00423E2D /* SearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = F071C1342309CF3E00423E2D /* SearchResults.swift */; };
 		F079267E2309D6E80007982A /* PhotosCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F079267D2309D6E80007982A /* PhotosCell.swift */; };
+		F0792681230A9D400007982A /* LikesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0792680230A9D400007982A /* LikesCollectionViewController.swift */; };
+		F0792683230A9D450007982A /* LikesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0792682230A9D450007982A /* LikesCollectionViewCell.swift */; };
+		F0792686230A9D860007982A /* UIKit + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0792685230A9D860007982A /* UIKit + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		F071C1322309CEDD00423E2D /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
 		F071C1342309CF3E00423E2D /* SearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResults.swift; sourceTree = "<group>"; };
 		F079267D2309D6E80007982A /* PhotosCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCell.swift; sourceTree = "<group>"; };
+		F0792680230A9D400007982A /* LikesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikesCollectionViewController.swift; sourceTree = "<group>"; };
+		F0792682230A9D450007982A /* LikesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikesCollectionViewCell.swift; sourceTree = "<group>"; };
+		F0792685230A9D860007982A /* UIKit + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,8 @@
 				F071C1312309CB9500423E2D /* Service */,
 				F079267F230A9CC50007982A /* Photos */,
 				F071C11B2309BD4800423E2D /* ViewController.swift */,
+				F0792684230A9D490007982A /* Likes */,
+				F0792687230A9D8C0007982A /* Helpers */,
 				F071C11D2309BD4800423E2D /* Main.storyboard */,
 				F071C1202309BD4C00423E2D /* Assets.xcassets */,
 				F071C1222309BD4C00423E2D /* LaunchScreen.storyboard */,
@@ -131,6 +139,23 @@
 				F079267D2309D6E80007982A /* PhotosCell.swift */,
 			);
 			path = Photos;
+			sourceTree = "<group>";
+		};
+		F0792684230A9D490007982A /* Likes */ = {
+			isa = PBXGroup;
+			children = (
+				F0792680230A9D400007982A /* LikesCollectionViewController.swift */,
+				F0792682230A9D450007982A /* LikesCollectionViewCell.swift */,
+			);
+			path = Likes;
+			sourceTree = "<group>";
+		};
+		F0792687230A9D8C0007982A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F0792685230A9D860007982A /* UIKit + Extension.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,11 +274,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F071C1332309CEDD00423E2D /* NetworkDataFetcher.swift in Sources */,
+				F0792681230A9D400007982A /* LikesCollectionViewController.swift in Sources */,
+				F0792683230A9D450007982A /* LikesCollectionViewCell.swift in Sources */,
 				F071C11C2309BD4800423E2D /* ViewController.swift in Sources */,
 				F071C1182309BD4800423E2D /* AppDelegate.swift in Sources */,
 				F071C12C2309BDBE00423E2D /* MainTabBarController.swift in Sources */,
 				F071C12E2309BE5900423E2D /* PhotosCollectionViewController.swift in Sources */,
 				F071C1302309C73B00423E2D /* NetworkService.swift in Sources */,
+				F0792686230A9D860007982A /* UIKit + Extension.swift in Sources */,
 				F071C1352309CF3E00423E2D /* SearchResults.swift in Sources */,
 				F071C11A2309BD4800423E2D /* SceneDelegate.swift in Sources */,
 				F079267E2309D6E80007982A /* PhotosCell.swift in Sources */,
