@@ -15,7 +15,7 @@ class MainTabBarController: UITabBarController {
         
         view.backgroundColor = .white
         
-        let photosVC = PhotosCollectionViewController(collectionViewLayout: UICollectionViewFlowLayout())
+        let photosVC = PhotosCollectionViewController(collectionViewLayout: WaterfallLayout())
         
         let likesVC = LikesCollectionViewController(collectionViewLayout: UICollectionViewFlowLayout())
         

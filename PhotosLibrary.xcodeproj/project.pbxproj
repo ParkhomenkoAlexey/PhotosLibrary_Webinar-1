@@ -23,6 +23,7 @@
 		F0792681230A9D400007982A /* LikesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0792680230A9D400007982A /* LikesCollectionViewController.swift */; };
 		F0792683230A9D450007982A /* LikesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0792682230A9D450007982A /* LikesCollectionViewCell.swift */; };
 		F0792686230A9D860007982A /* UIKit + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0792685230A9D860007982A /* UIKit + Extension.swift */; };
+		F0792689230A9FD70007982A /* WaterfallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0792688230A9FD70007982A /* WaterfallLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		F0792680230A9D400007982A /* LikesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikesCollectionViewController.swift; sourceTree = "<group>"; };
 		F0792682230A9D450007982A /* LikesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikesCollectionViewCell.swift; sourceTree = "<group>"; };
 		F0792685230A9D860007982A /* UIKit + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit + Extension.swift"; sourceTree = "<group>"; };
+		F0792688230A9FD70007982A /* WaterfallLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterfallLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				F071C12D2309BE5900423E2D /* PhotosCollectionViewController.swift */,
+				F0792688230A9FD70007982A /* WaterfallLayout.swift */,
 				F079267D2309D6E80007982A /* PhotosCell.swift */,
 			);
 			path = Photos;
@@ -280,6 +283,7 @@
 				F071C1182309BD4800423E2D /* AppDelegate.swift in Sources */,
 				F071C12C2309BDBE00423E2D /* MainTabBarController.swift in Sources */,
 				F071C12E2309BE5900423E2D /* PhotosCollectionViewController.swift in Sources */,
+				F0792689230A9FD70007982A /* WaterfallLayout.swift in Sources */,
 				F071C1302309C73B00423E2D /* NetworkService.swift in Sources */,
 				F0792686230A9D860007982A /* UIKit + Extension.swift in Sources */,
 				F071C1352309CF3E00423E2D /* SearchResults.swift in Sources */,

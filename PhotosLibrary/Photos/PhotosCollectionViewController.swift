@@ -17,8 +17,8 @@ class PhotosCollectionViewController: UICollectionViewController {
     
     private var selectedImages = [UIImage]()
     
-    private let itemsPerRow: CGFloat = 2 // относится к UICollectionViewDelegateFlowLayout
-    private let sectionInserts = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20) // относится к UICollectionViewDelegateFlowLayout
+//    private let itemsPerRow: CGFloat = 2 // относится к UICollectionViewDelegateFlowLayout
+//    private let sectionInserts = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20) // относится к UICollectionViewDelegateFlowLayout
     
     private lazy var addBarButtonItem: UIBarButtonItem = {
         return UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addBarButtonTapped))
@@ -127,6 +127,10 @@ class PhotosCollectionViewController: UICollectionViewController {
         collectionView.layoutMargins = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
         collectionView.contentInsetAdjustmentBehavior = .automatic
         collectionView.allowsMultipleSelection = true
+        
+        if let waterfallLayout = collectionViewLayout as? WaterfallLayout {
+            waterfallLayout.delegate = self
+        }
     }
     
     private func setupEnterLabel() {
@@ -212,24 +216,34 @@ extension PhotosCollectionViewController: UISearchBarDelegate {
     }
 }
 
-// MARK: - UICollectionViewDelegateFlowLayout
+//// MARK: - UICollectionViewDelegateFlowLayout
+//
+//extension PhotosCollectionViewController: UICollectionViewDelegateFlowLayout {
+//
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        let photo = photos[indexPath.item]
+//        let paddingSpace = sectionInserts.left * (itemsPerRow + 1)
+//        let availableWidth = view.frame.width - paddingSpace
+//        let widthPerItem = availableWidth / itemsPerRow
+//        let height = CGFloat(photo.height) * widthPerItem / CGFloat(photo.width)
+//        return CGSize(width: widthPerItem, height: height)
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+//        return sectionInserts
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+//        return sectionInserts.left
+//    }
+//}
 
-extension PhotosCollectionViewController: UICollectionViewDelegateFlowLayout {
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+// MARK: - WaterfallLayoutDelegate
+extension PhotosCollectionViewController: WaterfallLayoutDelegate {
+    func waterfallLayout(_ layout: WaterfallLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
         let photo = photos[indexPath.item]
-        let paddingSpace = sectionInserts.left * (itemsPerRow + 1)
-        let availableWidth = view.frame.width - paddingSpace
-        let widthPerItem = availableWidth / itemsPerRow
-        let height = CGFloat(photo.height) * widthPerItem / CGFloat(photo.width)
-        return CGSize(width: widthPerItem, height: height)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return sectionInserts
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return sectionInserts.left
+        //        print("photo.width: \(photo.width) photo.height: \(photo.height)\n")
+        return CGSize(width: photo.width, height: photo.height)
     }
 }
